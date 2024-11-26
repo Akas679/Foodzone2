@@ -1,0 +1,539 @@
+{% extends "base.html" %}
+{% block content %}
+        <!-- Carousel Start -->
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel with Redirect</title>
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Carousel Start -->
+    <div class="carousel">
+        <div class="container-fluid">
+            <div class="owl-carousel">
+                <!-- First Carousel Item -->
+                 
+                <div class="carousel-item">
+                    <div class="advertisement" style="background-color: #974762; color: white; padding: 5px 10px; margin-bottom: 5px; font-size: 20px; height: 30px; display: flex; align-items: center; justify-content: center;">
+                        <marquee behavior="scroll" direction="left" scrollamount="8">
+                            <strong class ="serif-text">"Indulge in the authentic taste of India – Fresh, handmade batters, sweets, and savory delights delivered to your doorstep!" </strong>
+                        </marquee>
+                    </div>
+                    <div class="carousel-img" style="position: relative; display: flex; justify-content: flex-start; align-items: center; height: 500px; background-image: url('/static/img/vid1.jpg'); background-size: cover; background-position: center;">
+                        <!-- Carousel Text on the Left -->
+                        <div class="carousel-text" style="position: absolute; left: 20px; color: white; text-align: left;">
+                            <h1>Sudha <span>Mrit</span></h1>
+                            <p>Nectarous Sweets | Fresh Savouries</p>
+                            <div class="carousel-btn">
+                                <a class="btn custom-btn" onclick="redirectToMenu()">View Menu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Third Carousel Item -->
+                <div class="carousel-item">
+                    <div class="advertisement" style="background-color: #974762; color:white; padding: 5px 10px; margin-bottom: 5px; font-size: 20px; height: 30px; display: flex; align-items: center; justify-content: center;">
+                        <marquee behavior="scroll" direction="left" scrollamount="8">
+                            <strong class ="serif-text">"Indulge in the authentic taste of India – Fresh, handmade batters, sweets, and savory delights delivered to your doorstep!" </strong>
+                        </marquee>
+                    </div>
+                    <div class="carousel-img" style="position: relative; display: flex; justify-content: flex-start; align-items: center; height: 500px; background-image: url('/static/img/45.jpeg'); background-size: cover; background-position: center;">
+                        <!-- Carousel Text on the Left -->
+                        <div class="carousel-text" style="position: absolute; left: 20px; color: white; text-align: left;">
+                            <h1>Shw<span>eth</span></h1>
+                            <p>Offering freshly made batters crafted from the finest materials to ensure soft idlis, crispy dosas, and authentic flavors every time.</p>
+                            <div class="carousel-btn">
+                                <a class="btn custom-btn" onclick="redirectToMenu()">View Menu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Carousel End -->
+    <div class="advertisement" style="background-color: #974762; color: white; padding: 5px; margin-bottom: 25px; font-size: 20px;">
+        <marquee behavior="scroll" direction="left" scrollamount="8">
+            <strong>Special Offer In SudhaStar: Get 10% off on all items! Hurry, limited time offer! </strong>
+        </marquee>
+    </div>
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- JavaScript for Redirect -->
+    <script>
+        function redirectToMenu() {
+            // Redirect to the menu page
+            window.location.href = "/dishes"; // Replace '/menu' with your actual menu page URL
+        }
+    </script>
+    
+</body>
+</html>
+
+        <!-- Carousel End -->
+
+        <!-- About Start -->
+       
+         
+        <div class="about" style="background-color: #974762;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-img">
+                            <img src="/static/img/vid1.jpg" alt="Image">
+                            <button type="button" class="btn-play " data-toggle="modal" data-src="/static/video/video.mp4" data-target="#videoModal">
+                               
+            
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-header">
+                                <p style="color: #000000;">About Us</p>
+                                <h2 style="color: #000000;">Cooking Since 2023</h2>
+                            </div>
+                            <div class="about-text">
+                                <p style="color: #fff;">
+                                    Welcome to <span style="font-weight: bold; color: #0a0a0a;">SudhaStar</span>, a leading brand committed to delivering high-quality, flavorful products. We proudly offer a diverse range of offerings through our two sub-brands:
+                                </p>
+                                <p style="color: #fff;">
+                                    <span style="font-weight: bold; color: #0a0a0a;">Sudhamrit</span>: Specializing in authentic Indian sweets made from fresh, healthy ingredients, ensuring a delightful and wholesome treat for every occasion. Each sweet is crafted with care to bring you the true taste of tradition.
+                                </p>
+                                <p style="color: #fff;"> <span style="font-weight: bold; color: #0a0a0a;">Shwet</span>: Offering freshly made batters for soft idlis and crispy dosas, crafted from the finest materials for a perfect, traditional experience. Our batters are designed to deliver consistent quality and authentic flavors with every use.</p>
+                                <p style="color: #fff;">
+                                    At <span style="font-weight: bold; color: #0a0a0a;">SudhaStar</span>, we also offer a selection of savory snacks, all prepared with the finest ingredients to guarantee freshness and taste.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+            </body>
+        </html>
+        <!-- About End -->
+        
+        
+        <!-- Video Modal Start-->
+        <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>        
+                        <!-- 16:9 aspect ratio -->
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+        <!-- Video Modal End -->
+        
+        
+        <!-- Video Modal End -->
+        
+        
+        <!-- Feature Start -->
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Features</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .feature {
+            padding: 50px 0;
+            background-color: #843a55;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+
+
+        .section-header p {
+            color: #0382b1;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            color: #333;
+        }
+
+        .feature-img {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            gap: 15px; /* Space between the images */
+            margin: 20px 0;
+        }
+
+        .feature-img img {
+            width: 200px; /* Set the desired width */
+            height: 200px; /* Set the desired height */
+            object-fit: cover; /* Ensures the image scales and crops to fit the dimensions */
+            margin: 10px; /* Optional: Add spacing between images */
+            border-radius: 8px; /* Optional: Add rounded corners */
+        }
+
+        
+
+        .feature-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            color: #f21d1d;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            color: #000000;
+            font-size: 14px;
+        }
+
+        .feature-item i {
+            font-size: 30px;
+            color: #f76c6c;
+            margin-bottom: 15px;
+        }
+
+        .btn.custom-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f76c6c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .btn.custom-btn:hover {
+            background-color: #e65c5c;
+        }
+    </style>
+</head>
+<body>
+    <div class="feature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="section-header">
+                        <p>Why Choose Us</p>
+                        <h2>Our Key Features</h2>
+                    </div>
+                    <div class="feature-text">
+                        <div class="feature-img">
+                            <img src="/static/img/feature_1.jpg" alt="Image 1">
+                            <img src="/static/img/feature_2.jpg" alt="Image 2">
+                            <img src="/static/img/feature_3.jpg" alt="Image 3">
+                            <img src="/static/img/45.jpg" alt="Image 4">
+                        </div>
+                        <p>
+                           <h3 style="font-weight: bold; color: #0ad4f8;">Our specialty includes <h3 style="font-weight: bold; color: #0ad4f8;">Indian Sweets,Batter(idlis/Dosa)</h3> </h3>
+
+                            <p style="font-weight: bold; color: #020202;">Enjoy the authentic taste of traditional Indian sweets like Gulab Jamun, Jalebi, and Kaju Katli. Perfect for celebrations, gifting, or a sweet treat anytime!</p>
+                           <p style="font-weight: bold; color: #000000;">  <h3 style="font-weight: bold; color: #0ad4f8;">Savouries</h3>
+                            <p style="font-weight: bold; color: #010101;">Savor the crunch of our spicy namkeen, crispy samosas, and more. Perfect for tea-time, parties, or quick snacks on the go.</p>
+                            <h3 style="font-weight: bold; color: #0ad4f8;">Batter</h3>
+                            <p style="font-weight: bold; color: #060606;">
+                            Whip up soft idlis, crispy dosas, and savory uttapams with our fresh, ready-to-use batter. Convenient and delicious for homemade meals!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="feature-item">
+                                <i class="flaticon-cooking"></i>
+                                <h3>World’s best Chef</h3>
+                                <p>
+                                    Our expert chefs bring passion and tradition to every dish, ensuring authentic flavors in every bite. With their skilled craftsmanship, they create the perfect balance of taste and quality in our sweets, savouries, and batters.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-item">
+                                <i class="flaticon-vegetable"></i>
+                                <h3>Natural ingredients</h3>
+                                <p>
+                                    Our products are crafted using only the finest natural ingredients, ensuring purity and authenticity in every bite. We prioritize quality, offering you the freshest and most flavorful sweets, savouries, and batters.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="feature-item">
+                                <i class="flaticon-medal"></i>
+                                <h3>Best quality products</h3>
+                                <p>
+                                    We offer the best quality products, made with the highest standards of craftsmanship and care. Each item, from sweets to savouries and batters, is designed to deliver exceptional taste and satisfaction.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-item">
+                                <i class="flaticon-meat"></i>
+                                <h3>Fresh ingredients</h3>
+                                <p>
+                                    
+We use only the freshest ingredients, ensuring our sweets, savouries, and batters are bursting with authentic flavor. Every product is carefully crafted to deliver a wholesome and delicious experience
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="feature-item">
+                                <i class="flaticon-courier"></i>
+                                <h3>Fastest door delivery</h3>
+                                <p>
+                                    
+Enjoy the fastest door delivery of our delicious sweets and batters, bringing fresh flavors straight to your doorstep. We ensure quick and reliable service for your ultimate convenience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+        <!-- Feature End -->
+        
+        
+<!-- Food Start -->
+ <style>
+    .food-item {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start slightly off-screen */
+    transition: all 0.8s ease-in-out; /* Smooth animation */
+}
+
+.food-item.fade-in {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.food-item.slide-in-up {
+    animation: slideInUp 1.2s ease forwards;
+}
+
+.food-item.zoom-in {
+    animation: zoomIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+ </style>
+<div class="food" style="background-color: #974762;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <div class="food-item animate zoom-in">
+                    <i class="fas fa-candy-cane"></i>
+                    <h2>Sweets</h2>
+                    <p>
+                        Gulab Jamun: Small, round dough balls made from milk solids (khoya), deep-fried and soaked in a sweet syrup flavored with cardamom and rose water, offering a soft, melt-in-the-mouth texture.
+
+                        Jalebi: A crispy, coil-shaped sweet made from a batter of flour and yogurt, deep-fried and soaked in sugar syrup, known for its crunchy exterior and syrupy, juicy interior.
+
+                        Imarti: Similar to Jalebi, but made from urad dal flour, deep-fried into intricate spirals, and soaked in sugar syrup, giving it a unique texture and a slightly different taste.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="food-item animate zoom-in">
+                    <i class="flaticon-snack"></i>
+                    <h2>Savouries</h2>
+                    <p>
+                        Indian savouries are a delightful range of crispy and spicy snacks enjoyed across the country. These include:
+                        Namkeen: A mix of salty, crispy treats like Aloo Bhujia and Sev.
+                        Chakli/Murukku: Spiral-shaped snacks made from rice and lentil flour.
+                        Mathri: Flaky, spiced crackers perfect for tea-time.
+                        Banana Chips: Thin, salted or spiced fried banana slices.
+                        Khakhra: Crisp, flavored flatbreads made from whole wheat.
+                        Kachori: Deep-fried rounds stuffed with lentils or spices.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="food-item animate zoom-in">
+                    <i class="flaticon-cooking"></i>
+                    <h2>Batter</h2>
+                    <p>
+                        Indian food batters form the base for a variety of traditional dishes, offering convenience and authenticity. Here's a list of popular batter specialties:
+                        Idli Batter: Made from fermented rice and urad dal, this batter produces soft, fluffy steamed rice cakes called idlis.
+                        Dosa Batter: A slightly thinner version of idli batter, perfect for making crispy, golden crepes known as dosas.
+                        Medu Vada Batter: A spiced urad dal batter used to make crispy, donut-shaped fritters called medu vadas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Our Brands</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+            <style>
+                .brand-title {
+    font-size: 1.8rem; /* Larger font size */
+    font-weight: 700; /* Bold font */
+    color: #974762; /* Vibrant color like Tomato */
+    text-transform: uppercase; /* All caps for emphasis */
+    letter-spacing: 1px; /* Slight spacing between letters */
+    margin: 15px 0; /* Add spacing above and below */
+    position: relative; /* Positioning for decorative elements */
+}
+
+.brand-title::before,
+.brand-title::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    background-color: #974762;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.brand-title::before {
+    left: -40px; /* Place line on the left */
+}
+
+.brand-title::after {
+    right: -40px; /* Place line on the right */
+}
+
+                .btn.custom-btn {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color: #974762;
+                    color: #fff;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    transition: background-color 0.1s ease;
+                }
+                .btn.custom-btn:hover {
+                    background-color: transparent;
+                }
+            </style>
+        </head>
+        <body>
+            <!-- Our Other Brands Section -->
+            <div class="our-brands" style="background-color: #974762; padding: 50px 0;">
+                <div class="container">
+                    <div class="section-header text-center" data-aos="fade-up">
+                        <h2 style="font-weight: bold; color: #000000;">Explore Our Other Brands</h2>
+                        <h2 style="font-weight: bold; color: #000000;">Discover Our Diverse Offerings</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6" data-aos="fade-right">
+                            <div class="brand-item text-center" style="padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgb(0, 0, 0);">
+                                <img src="/static/img/vid1.jpg" alt="Sudhamrit" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                                <h3 class="brand-title">Sudhamrit</h3>
+                                <p>Specializing in organic foods and premium spices, delivering the authentic essence of India through delightful sweets and savory treats.</p>
+                                <a href="https://brand1.com" class="btn custom-btn" target="_blank">Visit Sudhamrit</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-left">
+                            <div class="brand-item text-center" style="padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgb(0, 0, 0);">
+                                <img src="/static/img/batter.png" alt="Swet" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                                <h3 class="brand-title">Swet</h3>
+                                <p>Known for their premium quality batters and ready-to-eat meals, offering convenience without compromising on taste.</p>
+                                <a href="https://brand2.com" class="btn custom-btn" target="_blank">Visit Swet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Our Other Brands Section -->
+        
+            <!-- AOS Library Scripts -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+            <script>
+                AOS.init({
+                    duration: 1000, // Animation duration in milliseconds
+                    easing: 'ease-in-out', // Easing function
+                    once: true // Animate only once
+                });
+            </script>
+        </body>
+        </html>
+        
+        
+{% endblock %}

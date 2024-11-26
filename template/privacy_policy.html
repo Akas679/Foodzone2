@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy and Policy | Sudhastar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: url('/static/img/white.png') no-repeat center center fixed; /* Replace with your image URL */
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background: rgba(221, 143, 143, 0.8); /* Semi-transparent background */
+            animation: fadeInDown 1.5s ease-out; /* Navbar animation */
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+            animation: bounce 2s infinite; /* Bouncing logo animation */
+        }
+        .navbar-nav .nav-link {
+            font-size: 1rem;
+            color: #555 !important;
+            padding-right: 20px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #007bff !important;
+        }
+        .nav-item.active .nav-link {
+            font-weight: bold;
+            color: #007bff !important;
+        }
+
+        /* Privacy Section */
+        .privacy-container {
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 800px;
+            animation: slideInUp 1.5s ease-out; /* Slide-in animation */
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #007bff;
+            display: inline-block;
+            padding-bottom: 5px;
+            animation: zoomIn 1s ease-in-out; /* Zoom-in animation */
+        }
+        .privacy-content {
+            font-size: 1rem;
+            color: #333;
+        }
+        .privacy-content p {
+            margin-bottom: 15px;
+            animation: fadeIn 2s ease-in; /* Fade-in animation */
+        }
+        .privacy-content strong {
+            color: #007bff;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #555;
+            border-top: 1px solid #eaeaea;
+            animation: fadeInUp 1.5s ease-out; /* Fade-in footer animation */
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .privacy-container {
+                margin: 20px;
+                padding: 20px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/static/img/sudhastar.jpg" alt="Sudhastar Logo"> Sudhastar
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'all_dishes' %}">Dishes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Privacy and Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Privacy and Policy Section -->
+    <div class="container privacy-container">
+        <h1 class="section-title">Privacy and Policy</h1>
+        <div class="privacy-content">
+            <p><strong>Introduction:</strong> We value your privacy and are committed to protecting your personal data.</p>
+
+            <p><strong>Data Collection:</strong> We collect personal information such as name, email, and phone number to improve our services.</p>
+
+            <p><strong>Usage of Data:</strong> Your data will only be used to process orders, communicate with you, and improve your experience.</p>
+
+            <p><strong>Third-Party Sharing:</strong> We do not share your personal data with third parties without your consent, except as required by law.</p>
+
+            <p><strong>Security:</strong> We implement strong measures to ensure the safety and confidentiality of your data.</p>
+
+            <p><strong>Updates:</strong> This privacy policy may be updated periodically. Please check back for any changes.</p>
+
+            <p>If you have any questions about our Privacy Policy, feel free to <a href="#">contact us</a>.</p>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'all_dishes' %}">Dishes</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>&copy; 2024 Sudhastar. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

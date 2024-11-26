@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Page</title>
+
+    <!-- Load static files -->
+    {% load static %}
+
+    <!-- Link to external stylesheet (if any) -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('{% static "img/help-bg.jpg" %}') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .content {
+            width: 90%;
+            max-width: 700px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgb(0, 0, 0);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .content h2 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+        .content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content {
+                width: 95%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .logo {
+                width: 80px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{% static 'img/sudhastar.jpg' %}" alt="Logo" class="logo">
+        <h1>Help Page</h1>
+    </header>
+
+    <div class="content">
+        <h2>How to Get Support</h2>
+        <p>For any assistance, please reach out to us:
+            <p>1. Reach out to our support team by contact us at <a href=" Contact Number: +91-9876543210" style="color:#ffcc00;"> Contact Number: +91-9876543210</a>.</p>
+            <p>2. Reach out to our support team by Email us at <a href=" 📧 Email: support@sudhjastar.com " style="color:#ffcc00;"> 📧 Email: support@sudhjastar.com
+                🕒 Support Hours: Monday to Saturday, 9 AM - 7 PM
+            </a>.</p>
+        <p>1. Visit the <a href="{% url 'FAQs' %}" style="color:#ffcc00;">FAQ</a> section for common issues and solutions.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved. | <a href="{% url 'privacy_policy' %}">Privacy Policy</a> | <a href="{% url 'terms' %}">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Policy</title>
+
+    <!-- Load static files -->
+    {% load static %}
+
+    <!-- Link to external stylesheet (if any) -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('{% static "img/white.png" %}') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header {
+            padding: 10px;
+            width: 100%;
+            background: rgb(0, 0, 0); /* Slight darkening */
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 100px; /* Adjust logo size */
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            width: 90%;
+            max-width: 700px; /* Limiting max width */
+            background-color: transparent;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgb(0, 0, 0);
+        }
+
+        .content h2 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #000000; /* Updated color for headings */
+        }
+
+        .content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #0a0a0ab8; /* Updated color for headings */
+        }
+
+        .content ul {
+            list-style: disc inside;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            color: #0a0a0ab8; /* Updated color for headings */
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content {
+                width: 95%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .logo {
+                width: 80px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{% static 'img/sudhastar.jpg' %}" alt="Logo" class="logo">
+        <h1>Cookies Policy</h1>
+    </header>
+
+    <div class="content ">
+        <h2>Introduction</h2>
+        <p>We use cookies to improve your experience on our website. By continuing to use this site, you accept our use of cookies.</p>
+
+        <h2>What Are Cookies?</h2>
+        <p>Cookies are small files stored on your device that help us to personalize your experience and provide functionality to our site. We use cookies to remember your preferences, track usage, and analyze trends.</p>
+
+        <h2>How We Use Cookies</h2>
+        <p>We use cookies for the following purposes:</p>
+        <ul>
+            <li>To remember your login details</li>
+            <li>To track website usage and performance</li>
+            <li>To personalize your experience</li>
+            <li>To analyze traffic and improve our services</li>
+        </ul>
+
+        <h2>Your Choices</h2>
+        <p>You can control how cookies are set through your browser settings. If you wish, you can disable cookies or receive alerts when cookies are being used. However, please note that some features of the site may not work properly if you disable cookies.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SudhaStar. All rights reserved. | <a href="{% url 'privacy_policy' %}">Privacy Policy</a> | <a href="{% url 'terms' %}">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

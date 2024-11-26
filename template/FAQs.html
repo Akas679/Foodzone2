@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+
+    <!-- Load static files -->
+    {% load static %}
+
+    <!-- Link to external stylesheet (if any) -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('{% static "img/faq-bg.jpg" %}') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .content {
+            width: 90%;
+            max-width: 700px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgb(0, 0, 0);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .content h2 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .faq-item h3 {
+            font-size: 1.3rem;
+            color: #ffcc00;
+            cursor: pointer;
+        }
+
+        .faq-item p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 10px;
+            display: none;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateX(-50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content {
+                width: 95%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .logo {
+                width: 80px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{% static 'img/sudhastar.jpg' %}" alt="Logo" class="logo">
+        <h1>Frequently Asked Questions</h1>
+    </header>
+
+    <div class="content">
+        <h2>Common Questions</h2>
+
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer('answer1')">What are cookies?</h3>
+            <p id="answer1">Cookies are small pieces of data stored on your device to enhance your experience on our site, allowing us to remember your preferences and activities.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer('answer2')">How do I disable cookies?</h3>
+            <p id="answer2">You can disable cookies from your browser settings, but please note that some features may not function correctly if cookies are disabled.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer('answer3')">How do I contact support?</h3>
+            <p id="answer3">You can contact support by emailing <a href="mailto:support@yourwebsite.com" style="color:#ffcc00;">support@yourwebsite.com</a>.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SudhaStar. All rights reserved. | <a href="{% url 'privacy_policy' %}">Privacy Policy</a> | <a href="{% url 'terms' %}">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
